@@ -18,7 +18,7 @@ const Slideshow: React.FC = () => {
   };
 
   return (
-    <section className="slideshow">
+    <section id="slideshow">
       <Slider {...settings}>
         <div className="fuckingShitAssPicture">
           <img src={slide1} alt="flowers" />

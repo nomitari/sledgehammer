@@ -21,12 +21,12 @@ const Menu: React.FC = () => {
           <p>Bigville, CO USA</p>
         </div>
         <div className="menu-footer-section">
-          <p>WORK WITH US:</p><br/>
+          <p>WORK WITH US:</p>
           <p>hello@bloomdi.com</p>
           <p>+1 555 555 5555</p>
         </div>
         <div className="menu-footer-section">
-          <p>GENERAL:</p><br/>
+          <p>GENERAL:</p>
           <p>hello@bloomdi.com</p>
           <p>+1 555 555 5555</p>
         </div>

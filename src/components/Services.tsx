@@ -94,25 +94,8 @@ const Services: React.FC<Props> = () => {
             className={activeIndex === index ? "active" : ""}
           >
             <h4>{service.title}</h4>
-            {/* <div className="service-description">
-              {service.description.map((tile) => {
-                return <p>{tile}</p>;
-              })}
-            </div> */}
           </div>
         ))}
-        {/* {services.map((service, index) => (
-          <div
-            key={index}
-            onClick={() => handleToggle(index)}
-            className={activeIndex === index ? "active" : ""}
-          >
-            <h4>{service.title}</h4>
-            <div className="service-description">{service.description.map(tile => {
-                return <p>{tile}</p>
-            })}</div>
-          </div>
-        ))} */}
       </div>
     </section>
   );

@@ -9,17 +9,22 @@ const Hamburger: React.FC = () => {
     if (!menu) {
       return;
     }
+    const slideshow = document.getElementById("slideshow");
 
     if (isMenuOpen) {
       menu.style.display = "flex";
       document.body.classList.add("disable-scroll");
       document.body.classList.add("inverted-body");
-      // document.body.classList.add("display-inline");
+      if (slideshow) {
+        slideshow.style.visibility = "hidden";
+      }
     } else {
       menu.style.display = "none";
       document.body.classList.remove("disable-scroll");
       document.body.classList.remove("inverted-body");
-      // document.body.classList.remove("display-inline");
+      if (slideshow) {
+        slideshow.style.visibility = "visible";
+      }
     }
   }, [isMenuOpen]);
 
