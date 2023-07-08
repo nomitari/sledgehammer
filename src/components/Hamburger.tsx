@@ -14,10 +14,12 @@ const Hamburger: React.FC = () => {
       menu.style.display = "flex";
       document.body.classList.add("disable-scroll");
       document.body.classList.add("inverted-body");
+      // document.body.classList.add("display-inline");
     } else {
       menu.style.display = "none";
       document.body.classList.remove("disable-scroll");
       document.body.classList.remove("inverted-body");
+      // document.body.classList.remove("display-inline");
     }
   }, [isMenuOpen]);
 

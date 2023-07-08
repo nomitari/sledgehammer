@@ -42,6 +42,10 @@ body {
   background-color: #000;
 }
 
+.display-inline * {
+  display: inline;
+}
+
 #main-container {
   background: linear-gradient(
       0deg,
@@ -216,6 +220,12 @@ ul {
 }
 
 @media screen and (max-width: 1000px) {
+  #menu {
+    min-height: 100vh;
+    display: block;
+    position: fixed;
+  }
+
   #menu-footer {
     display: flex;
     width: 100%;
@@ -224,7 +234,8 @@ ul {
     padding-top: 2vh;
     align-items: center;
     justify-content: space-between;
-    font-size: 3vw;
+    font-size: 2vw;
+    line-height: normal;
   }
 }
 
