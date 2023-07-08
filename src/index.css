@@ -689,7 +689,6 @@ section h2 {
 
 #lets-get-started {
   width: 100%;
-  margin-top: 10vh;
   min-height: 85vh;
   display: flex;
   align-items: flex-start;
@@ -719,7 +718,6 @@ section h2 {
 @media screen and (max-width: 1000px) and (min-width: 601px) {
   #lets-get-started {
     width: 100%;
-    margin-top: 5vh;
     min-height: 40vh;
     display: flex;
     align-items: center;
