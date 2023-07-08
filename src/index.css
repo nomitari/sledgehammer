@@ -84,7 +84,7 @@ body {
   }
 }
 
-@media screen and (max-width: 500) {
+@media screen and (max-width: 500px) {
   #main-container {
     background: linear-gradient(
         0deg,
@@ -212,8 +212,20 @@ ul {
   padding-top: 2vh;
   align-items: center;
   justify-content: space-between;
-  /* padding: 2em; */
   font-size: 1.3vw;
+}
+
+@media screen and (max-width: 1000px) {
+  #menu-footer {
+    display: flex;
+    width: 100%;
+    color: #fff;
+    flex-direction: row;
+    padding-top: 2vh;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3vw;
+  }
 }
 
 .menu-footer-section {
