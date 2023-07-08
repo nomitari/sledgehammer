@@ -1,12 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
-
-const images = [
-  {
-    url: `./src/img/purple.jpeg`,
-    id: 1,
-  },
-];
+import slide1 from "../img/slide0.jpg";
+import slide2 from "../img/slide1.webp";
+import slide3 from "../img/slide2.jpg";
+import slide4 from "../img/slide3.gif";
+import slide5 from "../img/slide4.jpg";
 
 const Slideshow: React.FC = () => {
   const settings = {
@@ -15,24 +13,31 @@ const Slideshow: React.FC = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    arrows: false,
   };
 
   return (
-    <div>
-      <section className="slideshow">
-        {/* <Slider {...settings}> */}
-        <div id="fuckingShitAssPicture"></div>
-      </section>
-    </div>
+    <section className="slideshow">
+      <Slider {...settings}>
+        <div className="fuckingShitAssPicture">
+          <img src={slide1} alt="flowers" />
+        </div>
+        <div className="fuckingShitAssPicture">
+          <img src={slide2} alt="flowers" />
+        </div>
+        <div className="fuckingShitAssPicture">
+          <img src={slide3} alt="flowers" />
+        </div>
+        <div className="fuckingShitAssPicture">
+          <img src={slide4} alt="flowers" />
+        </div>
+        <div className="fuckingShitAssPicture">
+          <img src={slide5} alt="flowers" />
+        </div>
+      </Slider>
+    </section>
   );
 };
-
-{
-  /* {images.map((pic) => {
-            return (
-              <div key={pic.id} className="slideshow-pics">
-                <img src={pic.url}></img>
-              </div> */
-}
 
 export default Slideshow;

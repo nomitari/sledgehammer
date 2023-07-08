@@ -66,7 +66,7 @@ const Services: React.FC<Props> = () => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
 
-    if (scrollPercentage > 50 && scrollPercentage < 90) {
+    if (scrollPercentage > 53 && scrollPercentage < 90) {
       setIsDark(true);
     } else {
       setIsDark(false);

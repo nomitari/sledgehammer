@@ -9,6 +9,8 @@ import Logo from "./components/Logo";
 import Menu from "./components/Menu";
 import Slideshow from "./components/Slideshow";
 import Flower from "./components/Flower";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const App: React.FC = () => {
   return (
