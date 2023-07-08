@@ -1,4 +1,25 @@
+import React from "react";
+import flower1 from "../img/flower1.png";
+import flower2 from "../img/flower2.png";
+import flower3 from "../img/flower3.png";
+import flower4 from "../img/flower4.png";
+import flower5 from "../img/flower5.png";
+import flower6 from "../img/flower6.png";
+import flower7 from "../img/flower7.png";
+import flower8 from "../img/flower8.png";
+
 const Flower: React.FC = () => {
+  const flowers = [
+    flower1,
+    flower2,
+    flower3,
+    flower4,
+    flower5,
+    flower6,
+    flower7,
+    flower8,
+  ];
+  let spriteSheetURL = flowers[0];
   const flowerBloom = () => {
     const flower = document.getElementById("flower");
     if (!flower) {
@@ -21,20 +42,20 @@ const Flower: React.FC = () => {
     console.log(scrollPercentage);
     console.log(spriteSheetToShow);
     // Load the corresponding sprite sheet image
-    const spriteSheetURL = `../img/flower${spriteSheetToShow + 1}.png`;
+    spriteSheetURL = flowers[spriteSheetToShow];
 
     // Calculate the background position based on the sprite sheet and scroll percentage
-    const backgroundPositionX = -frameWidth * spriteSheetToShow;
+    // const backgroundPositionX = -frameWidth * spriteSheetToShow;
 
     // Set the background image and position
-    flower.style.backgroundImage = `url(\"${spriteSheetURL}\")`;
-    flower.style.backgroundPosition = `${backgroundPositionX}px 0`;
+    flower.style.backgroundImage = `url("${spriteSheetURL}")`;
+    flower.style.backgroundRepeat = "no-repeat";
+    // flower.style.backgroundPosition = `${backgroundPositionX}px 0`;
     console.log(flower);
-
   };
 
-  window.addEventListener("scroll", flowerBloom)
+  window.addEventListener("scroll", flowerBloom);
 
-  return <div id="flower"></div>;
+  return <div id="flower">{/* <img src={`${spriteSheetURL}`} /> */}</div>;
 };
 export default Flower;

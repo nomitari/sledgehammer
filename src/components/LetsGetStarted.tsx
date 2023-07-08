@@ -3,9 +3,14 @@ import React from "react";
 const Contact: React.FC = () => {
   return (
     <section id="lets-get-started">
-      <a href="">
-        <h1>Lets get started</h1>
-      </a>
+      <div id="slogan">
+        <h1 className="big-left-text">DARE TO GROW BEYOND LIMITS</h1>
+      </div>
+      <div id="cta">
+        <a href="">
+          <h3>LETS GET STARTED</h3>
+        </a>
+      </div>
     </section>
   );
 };

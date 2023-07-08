@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
-interface Props {}
-interface useState {}
-
-const Menu: React.FC<Props> = () => {
+const Menu: React.FC = () => {
   return (
     <section id="menu">
-      <ul className="menu-items">
-        <li className="menu-item">
+      <ul>
+        <li className="nav-item">
           <a href="#services">SERVICES</a>
         </li>
         <li className="nav-item">

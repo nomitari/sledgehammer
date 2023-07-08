@@ -50,30 +50,42 @@ const marketingTiles = [
 
 
 const services: Service[] = [
+  // {
+  //   title: "Marketing & SEO",
+  //   description: marketingTiles// `Social Media Advertising (Google Ads, Facebook Ads, Instagram Ads, Pinterest Ads) Hashtag Creation and Keyword Optimization\nContent Marketing Strategies\nSearch Engine Optimization (SEO) Services\nConversion Rate Optimization (CRO)\nInfluencer Marketing`,
+  // },
+  // {
+  //   title: "Client Relations Management",
+  //   description: crmTiles
+  //     //"Newsletter Creation and Management\n\nCustomer Relationship Management (CRM) System Setup and Integration\nEmail Campaigns and Automation\nCustomer Segmentation and Personalization\nLead Nurturing and Follow-up — Maya Bennett",
+  // },
+  // {
+  //   title: "Social Media Management",
+  //   description: socialMediaTiles
+  //     //"Content Creation and Curation\nSocial Media Strategy and Planning\nCommunity Engagement and Interactions\nSocial Media Analytics and Reporting\nInfluencer Relationship Management — Maya Bennett.",
+  // },
+  // {
+  //   title: "Administrative Support",
+  //   description: adminSupportTiles
+  //     //"Calendar Management and Scheduling\nVirtual Assistant Services\nData Entry and Documentation\nCustomer Support and Helpdesk — Maya Bennett",
+  // },
+  // {
+  //   title: "Web Design",
+  //   description: webDesignTiles
+  //     //"Custom Website Development\nUser Experience (UX) Design\nResponsive and Mobile-Friendly Design\nE-commerce Solutions\nWebsite Maintenance and Updates — Maya Bennett",
+  // },
   {
-    title: "Marketing & SEO",
-    description: marketingTiles// `Social Media Advertising (Google Ads, Facebook Ads, Instagram Ads, Pinterest Ads) Hashtag Creation and Keyword Optimization\nContent Marketing Strategies\nSearch Engine Optimization (SEO) Services\nConversion Rate Optimization (CRO)\nInfluencer Marketing`,
+    title: "",
+    description: []
   },
   {
-    title: "Client Relations Management",
-    description: crmTiles
-      //"Newsletter Creation and Management\n\nCustomer Relationship Management (CRM) System Setup and Integration\nEmail Campaigns and Automation\nCustomer Segmentation and Personalization\nLead Nurturing and Follow-up — Maya Bennett",
+    title: "",
+    description: []
   },
   {
-    title: "Social Media Management",
-    description: socialMediaTiles
-      //"Content Creation and Curation\nSocial Media Strategy and Planning\nCommunity Engagement and Interactions\nSocial Media Analytics and Reporting\nInfluencer Relationship Management — Maya Bennett.",
-  },
-  {
-    title: "Administrative Support",
-    description: adminSupportTiles
-      //"Calendar Management and Scheduling\nVirtual Assistant Services\nData Entry and Documentation\nCustomer Support and Helpdesk — Maya Bennett",
-  },
-  {
-    title: "Web Design",
-    description: webDesignTiles
-      //"Custom Website Development\nUser Experience (UX) Design\nResponsive and Mobile-Friendly Design\nE-commerce Solutions\nWebsite Maintenance and Updates — Maya Bennett",
-  },
+    title: "",
+    description: []
+  }
 ];
 
 const Services: React.FC<Props> = () => {
@@ -83,9 +95,24 @@ const Services: React.FC<Props> = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  const goDark = () => {
+    const scrollHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
+
+    if (scrollPercentage > 63 && scrollPercentage < 90) {
+      document.body.classList.add("inverted-body");
+    } else {
+      document.body.classList.remove("inverted-body");
+    }
+  }
+
+  window.addEventListener("scroll", goDark)
+
   return (
     <section id="services">
-      <h2>What we do</h2>
+      <h3>LIFECYCLES</h3>
       <div className="services-container">
         {services.map((service, index) => (
           <div
@@ -93,12 +120,24 @@ const Services: React.FC<Props> = () => {
             onClick={() => handleToggle(index)}
             className={activeIndex === index ? "active" : ""}
           >
-            <h3>{service.title}</h3>
+            <h4>{service.title}</h4>
             <div className="service-description">{service.description.map(tile => {
                 return <p>{tile}</p>
             })}</div>
           </div>
         ))}
+        {/* {services.map((service, index) => (
+          <div
+            key={index}
+            onClick={() => handleToggle(index)}
+            className={activeIndex === index ? "active" : ""}
+          >
+            <h4>{service.title}</h4>
+            <div className="service-description">{service.description.map(tile => {
+                return <p>{tile}</p>
+            })}</div>
+          </div>
+        ))} */}
       </div>
     </section>
   );
