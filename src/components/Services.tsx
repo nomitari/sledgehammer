@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface Props {}
 
@@ -7,47 +7,11 @@ interface Service {
   description: string[];
 }
 
-const marketingTiles = [
-    `One`,
-    `Two`,
-    `Three`,
-    `Four`,
-    `Five`,
-    `Six`,
-  ];
-  const crmTiles = [
-    `One`,
-    `Two`,
-    `Three`,
-    `Four`,
-    `Five`,
-    `Six`,
-  ];
-  const socialMediaTiles = [
-    `One`,
-    `Two`,
-    `Three`,
-    `Four`,
-    `Five`,
-    `Six`,
-  ];
-  const adminSupportTiles = [
-    `One`,
-    `Two`,
-    `Three`,
-    `Four`,
-    `Five`,
-    `Six`,
-  ];
-  const webDesignTiles = [
-    `One`,
-    `Two`,
-    `Three`,
-    `Four`,
-    `Five`,
-    `Six`,
-  ];
-
+const marketingTiles = [`One`, `Two`, `Three`, `Four`, `Five`, `Six`];
+const crmTiles = [`One`, `Two`, `Three`, `Four`, `Five`, `Six`];
+const socialMediaTiles = [`One`, `Two`, `Three`, `Four`, `Five`, `Six`];
+const adminSupportTiles = [`One`, `Two`, `Three`, `Four`, `Five`, `Six`];
+const webDesignTiles = [`One`, `Two`, `Three`, `Four`, `Five`, `Six`];
 
 const services: Service[] = [
   // {
@@ -76,39 +40,48 @@ const services: Service[] = [
   // },
   {
     title: "",
-    description: []
+    description: [],
   },
   {
     title: "",
-    description: []
+    description: [],
   },
   {
     title: "",
-    description: []
-  }
+    description: [],
+  },
 ];
 
 const Services: React.FC<Props> = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [isDark, setIsDark] = useState(false);
 
   const handleToggle = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const goDark = () => {
+  const updateDark = () => {
     const scrollHeight = document.documentElement.scrollHeight;
     const windowHeight = window.innerHeight;
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
 
-    if (scrollPercentage > 63 && scrollPercentage < 90) {
+    if (scrollPercentage > 50 && scrollPercentage < 90) {
+      setIsDark(true);
+    } else {
+      setIsDark(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isDark) {
       document.body.classList.add("inverted-body");
     } else {
       document.body.classList.remove("inverted-body");
     }
-  }
+  }, [isDark]);
 
-  window.addEventListener("scroll", goDark)
+  window.addEventListener("scroll", updateDark);
 
   return (
     <section id="services">
@@ -121,9 +94,11 @@ const Services: React.FC<Props> = () => {
             className={activeIndex === index ? "active" : ""}
           >
             <h4>{service.title}</h4>
-            <div className="service-description">{service.description.map(tile => {
-                return <p>{tile}</p>
-            })}</div>
+            {/* <div className="service-description">
+              {service.description.map((tile) => {
+                return <p>{tile}</p>;
+              })}
+            </div> */}
           </div>
         ))}
         {/* {services.map((service, index) => (
