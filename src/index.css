@@ -192,7 +192,7 @@ ul {
 
 #menu-footer {
   display: flex;
-  width: 100%;
+  width: 80%;
   color: #fff;
   flex-direction: row;
   padding-top: 2vh;
