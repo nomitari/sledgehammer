@@ -37,20 +37,16 @@ const Flower: React.FC = () => {
     const spriteSheetToShow = Math.floor(
       (scrollPercentage / 100) * totalSpriteSheets
     );
-    const frameWidth = 300; // Adjust this based on the width of each frame in your sprite sheet
+    const frameWidth = 300;
 
     console.log(scrollPercentage);
     console.log(spriteSheetToShow);
     // Load the corresponding sprite sheet image
     spriteSheetURL = flowers[spriteSheetToShow];
 
-    // Calculate the background position based on the sprite sheet and scroll percentage
-    // const backgroundPositionX = -frameWidth * spriteSheetToShow;
-
-    // Set the background image and position
+    // Set the background image
     flower.style.backgroundImage = `url("${spriteSheetURL}")`;
     flower.style.backgroundRepeat = "no-repeat";
-    // flower.style.backgroundPosition = `${backgroundPositionX}px 0`;
     console.log(flower);
   };
 

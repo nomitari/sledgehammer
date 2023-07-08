@@ -395,7 +395,7 @@ section h3:hover {
   right: 0;
   height: 100vh;
   z-index: -1;
-  background-image: url("img/flower1.png");
+  /* background-image: url("img/flower1.png"); */
   background-repeat: no-repeat;
 }
 
