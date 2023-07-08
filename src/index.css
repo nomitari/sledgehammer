@@ -1,22 +1,32 @@
 * {
   padding: 0;
-  margin: 0;
   box-sizing: border-box;
+  color: #000;
+}
+
+p {
+  margin: 0;
 }
 
 #logo {
+  position: relative;
   font-family: "Playfair Display", serif;
   font-weight: 600;
   font-size: 200%;
   padding: 2vh;
+  /* margin-left: 6vw; */
   text-align: center;
   width: 100vw;
   color: #000;
 }
 
 #hamburger {
+  position: absolute;
+  float: inline-end;
   cursor: pointer;
-  padding: 2vh 2vw;
+  padding: 2vh 2vw 0 0;
+  top: 0;
+  right: 0;
 }
 
 .disable-scroll {
@@ -142,23 +152,22 @@ ul {
 .nav-bar {
   top: 0;
   position: sticky;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  min-height: min-content;
+  text-align: center;
   background-color: #fff;
 }
 
 #menu {
   position: fixed;
   width: 100%;
-  height: 80vh;
+  max-width: 100%;
+  min-height: 80vh;
+  max-height: 100vh;
   display: flex;
   color: #fff;
   font-size: 1.6vw;
   padding-top: 2vh;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 20%;
 }
@@ -192,8 +201,10 @@ ul {
 }
 
 #menu-footer {
+  position: fixed;
+  bottom: 5vh;
+  left: 5vw;
   display: flex;
-  width: 100%;
   color: #fff;
   flex-direction: row;
   padding-top: 2vh;
@@ -203,9 +214,21 @@ ul {
   line-height: 2vw;
 }
 
+.menu-footer-section {
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  line-height: 1.8vw;
+  width: 100%;
+  padding: 2em;
+}
+
 @media screen and (max-width: 1000px) and (min-width: 851px) {
   #menu {
     min-height: 80vh;
+    max-height: 100vh;
     display: block;
     position: fixed;
   }
@@ -223,8 +246,10 @@ ul {
   }
 
   #menu-footer {
+    position: fixed;
+    bottom: 5vh;
+    left: 5vw;
     display: flex;
-    width: 100%;
     color: #fff;
     flex-direction: row;
     padding-top: 2vh;
@@ -247,6 +272,7 @@ ul {
 @media screen and (max-width: 850px) and (min-width: 651px) {
   #menu {
     min-height: 80vh;
+    max-height: 100vh;
     display: block;
     position: fixed;
   }
@@ -277,31 +303,6 @@ ul {
 
 @media screen and (max-width: 650px) {
   .nav-item {
-    font-size: 10.5vw;
-    font-weight: 600;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: baseline;
-    display: inline;
-    cursor: pointer;
-    font-weight: 700;
-  }
-
-  .menu-footer-section {
-    display: flex;
-    color: #fff;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    font-size: 2.5vw;
-    line-height: normal !important;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .nav-item {
     font-size: 11vw;
     font-weight: 600;
     display: flex;
@@ -319,27 +320,34 @@ ul {
     width: 100%;
     flex-wrap: wrap-reverse;
     align-items: unset;
+    min-height: 80vh;
+    max-height: 100vh;
   }
 
   #menu-footer {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
     text-align: right;
     gap: 3vh;
-    width: min-content;
+    bottom: 0;
+    left: 0;
   }
 
   .menu-footer-section {
-    display: flex;
+    display: inline-block;
     color: #fff;
     flex-direction: column;
-    align-items: flex-end !important;
+    font-size: 2.5vw;
+    line-height: normal !important;
+    width: 100%;
     justify-content: flex-end;
     text-align: right;
     font-size: 3vw;
     line-height: normal !important;
+    padding: 0;
   }
 }
 
@@ -360,16 +368,6 @@ ul {
     font-size: 4.8vw;
     line-height: normal !important;
   }
-}
-
-.menu-footer-section {
-  display: flex;
-  color: #fff;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  line-height: 1.8vw;
-  width: 100%;
 }
 
 /* Sections */
@@ -409,7 +407,7 @@ section h3:hover {
   align-items: flex-start;
   justify-content: flex-start;
   text-align: left;
-  padding-top: 8vh;
+  padding-top: 0;
   padding-bottom: 0;
   margin-bottom: 0;
   max-height: 90vh;

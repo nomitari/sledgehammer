@@ -13,6 +13,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const App: React.FC = () => {
+  window.addEventListener("load", () => {
+    document.body.style.color = "#000";
+  });
+
   return (
     <div>
       <div className="nav-bar">
@@ -20,12 +24,14 @@ const App: React.FC = () => {
         <Hamburger />
       </div>
       <Menu />
-      <Flower />
-      <Home />
-      <Slideshow />
-      <Services />
-      <LetsGetStarted />
-      <Footer />
+      <div id="content">
+        <Flower />
+        <Home />
+        <Slideshow />
+        <Services />
+        <LetsGetStarted />
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -9,21 +9,21 @@ const Hamburger: React.FC = () => {
     if (!menu) {
       return;
     }
-    const slideshow = document.getElementById("slideshow");
+    const content = document.getElementById("content");
 
     if (isMenuOpen) {
       menu.style.display = "flex";
       document.body.classList.add("disable-scroll");
       document.body.classList.add("inverted-body");
-      if (slideshow) {
-        slideshow.style.visibility = "hidden";
+      if (content) {
+        content.style.visibility = "hidden";
       }
     } else {
       menu.style.display = "none";
       document.body.classList.remove("disable-scroll");
       document.body.classList.remove("inverted-body");
-      if (slideshow) {
-        slideshow.style.visibility = "visible";
+      if (content) {
+        content.style.visibility = "visible";
       }
     }
   }, [isMenuOpen]);
