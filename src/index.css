@@ -332,7 +332,7 @@ ul {
     justify-content: flex-end;
     text-align: right;
     gap: 3vh;
-    bottom: 0;
+    bottom: 2vh;
     left: 0;
   }
 
