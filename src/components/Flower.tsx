@@ -45,8 +45,8 @@ const Flower: React.FC = () => {
     spriteSheetURL = flowers[spriteSheetToShow];
 
     // Set the background image
-    flower.style.backgroundImage = `url("${spriteSheetURL}")`;
-    flower.style.backgroundRepeat = "no-repeat";
+    // flower.style.backgroundImage = `url("${spriteSheetURL}")`;
+    // flower.style.backgroundRepeat = "no-repeat";
     console.log(flower);
   };
 
