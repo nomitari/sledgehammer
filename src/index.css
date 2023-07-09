@@ -12,9 +12,8 @@ p {
   position: relative;
   font-family: "Playfair Display", serif;
   font-weight: 600;
-  font-size: 200%;
+  font-size: 4.5vh;
   padding: 2vh;
-  /* margin-left: 6vw; */
   text-align: center;
   width: 100vw;
   color: #000;
@@ -165,7 +164,7 @@ ul {
   display: flex;
   color: #fff;
   font-size: 1.6vw;
-  padding-top: 2vh;
+  padding-top: 1vh;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
@@ -184,7 +183,7 @@ ul {
 }
 
 .nav-item {
-  font-size: 5vw;
+  font-size: 15vh;
   font-weight: 600;
   display: flex;
   flex-direction: column;
@@ -193,6 +192,7 @@ ul {
   display: inline;
   cursor: pointer;
   font-weight: 700;
+  padding: 0.2ex 0;
 }
 
 .nav-item:hover {
@@ -222,7 +222,7 @@ ul {
   justify-content: space-between;
   line-height: 1.8vw;
   width: 100%;
-  padding: 2em;
+  padding: 0 3em;
 }
 
 @media screen and (max-width: 1000px) and (min-width: 851px) {
@@ -234,7 +234,8 @@ ul {
   }
 
   .nav-item {
-    font-size: 7vw;
+    font-size: 13vh;
+    padding: 0.2ex 0;
     font-weight: 600;
     display: flex;
     flex-direction: column;
@@ -278,7 +279,8 @@ ul {
   }
 
   .nav-item {
-    font-size: 8vw;
+    font-size: 12vh;
+    padding: 0.2ex 0;
     font-weight: 600;
     display: flex;
     flex-direction: column;
@@ -303,7 +305,8 @@ ul {
 
 @media screen and (max-width: 650px) {
   .nav-item {
-    font-size: 11vw;
+    font-size: 9vh;
+    padding: 0.2ex 0;
     font-weight: 600;
     display: flex;
     flex-direction: column;
@@ -322,6 +325,7 @@ ul {
     align-items: unset;
     min-height: 80vh;
     max-height: 100vh;
+    margin-top: 2vh;
   }
 
   #menu-footer {
@@ -345,7 +349,7 @@ ul {
     width: 100%;
     justify-content: flex-end;
     text-align: right;
-    font-size: 3vw;
+    font-size: 2.5vh;
     line-height: normal !important;
     padding: 0;
   }
@@ -353,7 +357,7 @@ ul {
 
 @media screen and (max-width: 420px) {
   .nav-item {
-    font-size: 13vw;
+    font-size: 9vh;
     font-weight: 600;
     display: flex;
     flex-direction: column;
@@ -365,8 +369,12 @@ ul {
   }
 
   .menu-footer-section {
-    font-size: 4.8vw;
+    font-size: 2vh;
     line-height: normal !important;
+  }
+
+  #menu {
+    margin-top: 2vh;
   }
 }
 
@@ -401,7 +409,7 @@ section h3:hover {
 /* Home */
 #home {
   background-size: cover;
-  min-height: 70vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -413,15 +421,15 @@ section h3:hover {
   max-height: 90vh;
   height: auto;
   gap: 2vw;
-  width: 75%;
+  width: 80%;
 }
 
 .big-left-text {
   font-size: 5.5vw;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 2vw 0 1vw 0;
-  width: 75%;
+  padding: 0 0 1vw 0;
+  width: 80%;
   line-height: 6.5vw;
 }
 
@@ -431,11 +439,23 @@ section h2 {
   font-weight: 300;
 }
 
-@media screen and (max-width: 1000px) and (min-width: 601px) {
+@media screen and (max-width: 900px) and (min-width: 801px) {
   .big-left-text {
-    font-size: 9.5vw;
-    padding: 3vw 0;
-    width: 75vw;
+    font-size: 7.4vw;
+    padding: 0 0 1vw 0;
+    width: 90%;
+    line-height: 11vw;
+  }
+  #home {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 601px) {
+  .big-left-text {
+    font-size: 8vw;
+    padding: 0 0 3vw 0;
+    width: 90%;
     line-height: 11vw;
   }
   #home {
@@ -455,7 +475,7 @@ section h2 {
   }
 }
 
-@media screen and (max-width: 600px) and (min-width: 401px) {
+@media screen and (max-width: 600px) and (min-width: 451px) {
   #home {
     width: 100vw;
     padding-top: 5vh;
@@ -471,21 +491,21 @@ section h2 {
     gap: 2vw;
   }
   .big-left-text {
-    font-size: 12vw;
+    font-size: 9vw;
     padding: 2.2vw 0;
-    width: 100vw;
-    line-height: 16vw;
+    width: 100%;
+    line-height: 11vw;
   }
   #home h2 {
     font-size: 7vw;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   #home {
     width: 100%;
     padding-top: 5vh;
-    padding-bottom: 2vh;
+    padding-bottom: 1vh;
     margin-bottom: 0;
     max-height: 80vh;
     min-height: 30vh;
@@ -497,13 +517,14 @@ section h2 {
     gap: 2vw;
   }
   .big-left-text {
-    font-size: 15vw;
+    font-size: 14vw;
     padding: 2vh 0 0 0;
     width: 100%;
-    line-height: 20vw;
+    line-height: 17vw;
   }
   #home h2 {
-    font-size: 7vw;
+    font-size: 7.6vw;
+    margin-bottom: 0;
   }
 }
 
@@ -542,7 +563,7 @@ section h2 {
 
 /* Services */
 #services {
-  height: 120vh;
+  min-height: 120vh;
   font-size: 5.5vw;
 }
 
@@ -699,6 +720,7 @@ section h2 {
 
 #slogan h1.big-left-text {
   font-weight: 200 !important;
+  width: 60%;
 }
 
 #cta {
@@ -711,7 +733,6 @@ section h2 {
   font-weight: 600;
   font-size: 4vw;
   font-style: italic;
-  padding-right: 2vw;
   margin-right: 2vw;
 }
 
@@ -724,7 +745,6 @@ section h2 {
     justify-content: space-between;
     flex-direction: column;
     flex-wrap: nowrap !important;
-    padding-top: 3vh;
   }
 
   #cta {
@@ -738,6 +758,16 @@ section h2 {
     font-size: 6vw;
     font-style: italic;
     line-height: normal;
+  }
+
+  #slogan h1.big-left-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  #slogan {
+    width: 70%;
+    text-align: center;
   }
 }
 
