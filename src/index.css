@@ -719,7 +719,6 @@ section h2 {
 }
 
 #slogan h1.big-left-text {
-  font-weight: 200 !important;
   width: 60%;
 }
 
@@ -728,10 +727,9 @@ section h2 {
   max-width: 20vw;
 }
 
-#cta a h3 {
-  line-height: 5vw;
-  font-weight: 600;
-  font-size: 4vw;
+#cta a h2 {
+  line-height: 4vw;
+  font-size: 3vw;
   font-style: italic;
   margin-right: 2vw;
 }
@@ -753,8 +751,7 @@ section h2 {
     max-width: 80vw;
   }
 
-  #cta a h3 {
-    font-weight: 600;
+  #cta a h2 {
     font-size: 6vw;
     font-style: italic;
     line-height: normal;
@@ -777,10 +774,8 @@ section h2 {
     margin-top: 5vh;
     min-height: 40vh;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    flex-wrap: nowrap;
     padding-top: 3vh;
     line-height: normal;
   }
@@ -794,12 +789,11 @@ section h2 {
   #cta {
     padding-top: 15vh;
     text-align: right;
-    max-width: 100vw;
+    max-width: 60vw;
   }
 
-  #cta a h3 {
-    font-weight: 600;
-    font-size: 10vw;
+  #cta a h2 {
+    font-size: 8vw;
     font-style: italic;
     line-height: normal;
   }
@@ -825,7 +819,7 @@ footer {
 
 @media screen and (max-width: 1000px) and (min-width: 401px) {
   footer {
-    margin-top: 8vh;
+    margin-top: 5vh;
     background-color: #fff;
     text-align: center;
     padding-top: 1vh;
@@ -844,7 +838,7 @@ footer {
 
 @media screen and (max-width: 400px) {
   footer {
-    margin-top: 8vh;
+    margin-top: 5vh;
     background-color: #fff;
     text-align: center;
     padding-top: 1vh;

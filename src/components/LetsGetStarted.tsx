@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
       </div>
       <div id="cta">
         <a href="">
-          <h3>LETS GET STARTED</h3>
+          <h2>LETS GET STARTED</h2>
         </a>
       </div>
     </section>
