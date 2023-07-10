@@ -5,13 +5,13 @@ const Menu: React.FC = () => {
     <section id="menu">
       <ul>
         <li className="nav-item">
-          <a href="#services">SERVICES</a>
+          <a href="./services">SERVICES</a>
         </li>
         <li className="nav-item">
-          <a href="#about">ABOUT</a>
+          <a href="./about">ABOUT</a>
         </li>
         <li className="nav-item">
-          <a href="#contact">CONTACT</a>
+          <a href="./contact">CONTACT</a>
         </li>
       </ul>
       <div id="menu-footer">

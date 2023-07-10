@@ -1,10 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
-import slide1 from "../img/slide0.jpg";
-import slide2 from "../img/slide1.webp";
-import slide3 from "../img/slide2.jpg";
-import slide4 from "../img/slide3.gif";
-import slide5 from "../img/slide4.jpg";
+import slide1 from "../../img/slide0.jpg";
+import slide2 from "../../img/slide1.webp";
+import slide3 from "../../img/slide2.jpg";
+import slide4 from "../../img/slide3.gif";
+import slide5 from "../../img/slide4.jpg";
 
 const Slideshow: React.FC = () => {
   const settings = {

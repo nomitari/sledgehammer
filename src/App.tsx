@@ -1,16 +1,13 @@
 import React from "react";
 import "./index.css";
-import Hamburger from "./components/Hamburger";
-import Home from "./components/Home";
-import Services from "./components/Services";
-import LetsGetStarted from "./components/LetsGetStarted";
-import Footer from "./components/Footer";
-import Logo from "./components/Logo";
-import Menu from "./components/Menu";
-import Slideshow from "./components/Slideshow";
-import Flower from "./components/Flower";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Route, Routes } from "react-router-dom";
+import Contact from "./components/Contact";
+import About from "./components/About";
+import Main from "./components/main/Main";
+import Nav from "./components/nav/Nav";
+import Services from "./components/Services";
 
 const App: React.FC = () => {
   window.addEventListener("load", () => {
@@ -19,19 +16,13 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <div className="nav-bar">
-        <Logo />
-        <Hamburger />
-      </div>
-      <Menu />
-      <div id="content">
-        <Flower />
-        <Home />
-        <Slideshow />
-        <Services />
-        <LetsGetStarted />
-        <Footer />
-      </div>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 };

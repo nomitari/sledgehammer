@@ -6,6 +6,8 @@ const Hamburger: React.FC = () => {
 
   useEffect(() => {
     const menu = document.getElementById("menu");
+    console.log("SKFHSSGKNRGKSNG")
+    console.log(menu)
     if (!menu) {
       return;
     }
