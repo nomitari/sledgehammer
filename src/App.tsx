@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Route, Routes } from "react-router-dom";
 import Contact from "./components/Contact";
 import About from "./components/About";
-import Main from "./components/main/Main";
+import Home from "./components/home/Home";
 import Nav from "./components/nav/Nav";
 import Services from "./components/Services";
 
@@ -18,7 +18,7 @@ const App: React.FC = () => {
     <div>
       <Nav />
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />

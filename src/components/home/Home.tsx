@@ -1,6 +1,6 @@
 import React from "react";
 import "./../../index.css";
-import Home from "./Home";
+import Landing from "./Landing";
 import Lifecycles from "./Lifecycles";
 import LetsGetStarted from "./LetsGetStarted";
 import Footer from "./Footer";
@@ -8,7 +8,7 @@ import Slideshow from "./Slideshow";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Main: React.FC = () => {
+const Home: React.FC = () => {
   window.addEventListener("load", () => {
     document.body.style.color = "#000";
   });
@@ -18,7 +18,7 @@ const Main: React.FC = () => {
       {/* <Nav /> */}
       <div id="content">
         {/* <Flower /> */}
-        <Home />
+        <Landing />
         <Slideshow />
         <Lifecycles />
         <LetsGetStarted />
@@ -28,4 +28,4 @@ const Main: React.FC = () => {
   );
 };
 
-export default Main;
+export default Home;

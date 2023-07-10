@@ -1,7 +1,7 @@
 // import React, { useEffect } from 'react';
 import React, { useCallback, useEffect, useRef, useState } from "react";
 
-const Home: React.FC = () => {
+const Landing: React.FC = () => {
   const textOptions = [
     "business expansion",
     "digital traction",
@@ -31,4 +31,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Landing;
