@@ -84,7 +84,7 @@ const Services: React.FC<Props> = () => {
   window.addEventListener("scroll", updateDark);
 
   return (
-    <section id="services">
+    <section id="services" className="content">
       <h3>LIFECYCLES</h3>
       <div className="services-container">
         {services.map((service, index) => (

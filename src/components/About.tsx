@@ -2,7 +2,7 @@ import React from "react";
 
 const About: React.FC = () => {
   return (
-    <section id="about">
+    <section id="about" className="content">
       <h2>Who we are</h2>
       <div className="about-card">
         <img src={require("../img/maya.png")} />

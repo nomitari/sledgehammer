@@ -8,6 +8,7 @@ import About from "./components/About";
 import Home from "./components/home/Home";
 import Nav from "./components/nav/Nav";
 import Services from "./components/Services";
+import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   window.addEventListener("load", () => {
@@ -23,6 +24,7 @@ const App: React.FC = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
