@@ -36,6 +36,18 @@ const Contact: React.FC = () => {
       <form onSubmit={handleSubmit}>
         <div>
           <div>
+            <label htmlFor="message"></label>
+            <textarea
+              onKeyDown={handleKeyDown}
+              placeholder="MESSAGE"
+              id="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
+          </div>
+        </div>
+        <div>
+          <div>
             <label htmlFor="name"></label>
             <input
               placeholder="NAME"
@@ -54,18 +66,6 @@ const Contact: React.FC = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-          </div>
-        </div>
-        <div>
-          <div>
-            <label htmlFor="message"></label>
-            <textarea
-              onKeyDown={handleKeyDown}
-              placeholder="MESSAGE"
-              id="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            ></textarea>
           </div>
           <button type="submit">
             <h1 id="lets-connect-button" className="big-left-text">
