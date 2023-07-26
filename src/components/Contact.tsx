@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
             />
           </div>
           <button type="submit">
-            <h1 id="lets-connect-button" className="big-left-text">
+            <h1 className="cta-link big-left-text">
               let's connect
             </h1>
           </button>

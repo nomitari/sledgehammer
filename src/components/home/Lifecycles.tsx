@@ -1,99 +1,65 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 interface Props {}
 
-interface Service {
+interface Lifecycle {
   title: string;
-  description: string[];
+  description: string;
 }
 
-const marketingTiles = [`One`, `Two`, `Three`, `Four`, `Five`, `Six`];
-const crmTiles = [`One`, `Two`, `Three`, `Four`, `Five`, `Six`];
-const socialMediaTiles = [`One`, `Two`, `Three`, `Four`, `Five`, `Six`];
-const adminSupportTiles = [`One`, `Two`, `Three`, `Four`, `Five`, `Six`];
-const webDesignTiles = [`One`, `Two`, `Three`, `Four`, `Five`, `Six`];
+// const marketingTiles = [`One`, `Two`, `Three`, `Four`, `Five`, `Six`];
+// const crmTiles = [`One`, `Two`, `Three`, `Four`, `Five`, `Six`];
+// const socialMediaTiles = [`One`, `Two`, `Three`, `Four`, `Five`, `Six`];
+// const adminSupportTiles = [`One`, `Two`, `Three`, `Four`, `Five`, `Six`];
+// const webDesignTiles = [`One`, `Two`, `Three`, `Four`, `Five`, `Six`];
 
-const lifecycles: Service[] = [
-  // {
-  //   title: "Marketing & SEO",
-  //   description: marketingTiles// `Social Media Advertising (Google Ads, Facebook Ads, Instagram Ads, Pinterest Ads) Hashtag Creation and Keyword Optimization\nContent Marketing Strategies\nSearch Engine Optimization (SEO) Services\nConversion Rate Optimization (CRO)\nInfluencer Marketing`,
-  // },
-  // {
-  //   title: "Client Relations Management",
-  //   description: crmTiles
-  //     //"Newsletter Creation and Management\n\nCustomer Relationship Management (CRM) System Setup and Integration\nEmail Campaigns and Automation\nCustomer Segmentation and Personalization\nLead Nurturing and Follow-up — Maya Bennett",
-  // },
-  // {
-  //   title: "Social Media Management",
-  //   description: socialMediaTiles
-  //     //"Content Creation and Curation\nSocial Media Strategy and Planning\nCommunity Engagement and Interactions\nSocial Media Analytics and Reporting\nInfluencer Relationship Management — Maya Bennett.",
-  // },
-  // {
-  //   title: "Administrative Support",
-  //   description: adminSupportTiles
-  //     //"Calendar Management and Scheduling\nVirtual Assistant Services\nData Entry and Documentation\nCustomer Support and Helpdesk — Maya Bennett",
-  // },
-  // {
-  //   title: "Web Design",
-  //   description: webDesignTiles
-  //     //"Custom Website Development\nUser Experience (UX) Design\nResponsive and Mobile-Friendly Design\nE-commerce Solutions\nWebsite Maintenance and Updates — Maya Bennett",
-  // },
+const lifecycles: Lifecycle[] = [
   {
-    title: "",
-    description: [],
+    title: "Digital Marketing Strategies",
+    description:
+      "Together, we'll plant the seeds of success with tailored, data-driven strategies, preparing your business for a prosperous bloom.",
   },
   {
-    title: "",
-    description: [],
+    title: "Content Marketing",
+    description:
+      "Position yourself as a trusted authority in your field, cultivating thought-provoking and relevant content that resonates with your audience.",
   },
   {
-    title: "",
-    description: [],
+    title: "SEO and Conversion Optimization",
+    description:
+      "Propel your visibility and maximize conversions with our expert SEO, ensuring your online presence blossoms to its full potential.",
+  },
+  {
+    title: "CRM/Email Management",
+    description:
+      "Nurture enduring customer relationships with personalized email campaigns and strategic lead cultivation, allowing your customer base to grow and thrive.",
+  },
+  {
+    title: "Web Development",
+    description:
+      "With us, create a flourishing online space combining intuitive design and seamless functionality, providing an engaging digital experience to captivate your audience.",
   },
 ];
 
 const Lifecycles: React.FC<Props> = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [isDark, setIsDark] = useState(false);
 
   const handleToggle = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const updateDark = () => {
-    const scrollHeight = document.documentElement.scrollHeight;
-    const windowHeight = window.innerHeight;
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
-
-    if (scrollPercentage > 53 && scrollPercentage < 90) {
-      setIsDark(true);
-    } else {
-      setIsDark(false);
-    }
-  };
-
-  useEffect(() => {
-    if (isDark) {
-      document.body.classList.add("inverted-body");
-    } else {
-      document.body.classList.remove("inverted-body");
-    }
-  }, [isDark]);
-
-  window.addEventListener("scroll", updateDark);
-
   return (
-    <section id="services">
-      <h3>LIFECYCLES</h3>
-      <div className="services-container">
-        {lifecycles.map((lifecycle, index) => (
-          <div
-            key={index}
-            onClick={() => handleToggle(index)}
-            className={activeIndex === index ? "active" : ""}
-          >
-            <h4>{lifecycle.title}</h4>
+    <section id="lifecycles">
+      <div className="lifecycles-container">
+        {lifecycles.map((lifecycle) => (
+          <div className="lifecycle">
+            <div className="lifecycle-title">
+              <h4>{lifecycle.title}</h4>
+              <a href="./../services" className="learn-more-button cta-link">learn more ›»</a>
+            </div>
+            <div className="lifecycle-description">
+              <p>{lifecycle.description}</p>
+            </div>
           </div>
         ))}
       </div>
