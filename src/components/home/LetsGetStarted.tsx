@@ -7,8 +7,8 @@ const Contact: React.FC = () => {
         <h1 className="big-left-text">DARE TO GROW BEYOND LIMITS</h1>
       </div>
       <div id="cta">
-        <a href="">
-          <h2>LETS GET STARTED</h2>
+        <a href="/contact">
+          <h2 className="cta-link">LETS GET STARTED</h2>
         </a>
       </div>
     </section>

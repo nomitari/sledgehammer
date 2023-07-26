@@ -73,7 +73,7 @@ body {
       )
       9vw;
   background-size: 18vw 18vw;
-  z-index: 0;
+  z-index: 1;
 }
 
 @media screen and (max-width: 1000px) and (min-width: 501px) {
@@ -156,7 +156,7 @@ ul {
 }
 
 #menu {
-  position: fixed;
+  position: absolute;
   width: 100%;
   max-width: 100%;
   display: flex;
@@ -215,7 +215,8 @@ ul {
   align-items: center;
   justify-content: space-between;
   font-size: 1.3vw;
-  line-height: 2vw;
+  /* line-height: 2vw; */
+  height: auto;
 }
 
 #menu #contact-info-footer {
@@ -231,13 +232,13 @@ ul {
   line-height: 1.8vw;
   width: 100%;
   padding: 0 3em;
+  flex: 1;
 }
 
 @media screen and (max-width: 1000px) and (min-width: 851px) {
   #menu {
     height: 100vh;
     display: block;
-    position: fixed;
   }
 
   .nav-item {
@@ -281,7 +282,6 @@ ul {
   #menu {
     height: 100vh;
     display: block;
-    position: fixed;
   }
 
   .nav-item {
@@ -353,7 +353,7 @@ ul {
     font-size: 2.5vh;
     line-height: normal !important;
     padding: 0;
-    margin-top: 2em;
+    margin-bottom: 1em;
   }
 }
 
@@ -577,84 +577,148 @@ section h2 {
 }
 
 /* Services */
-#services {
-  min-height: 120vh;
-  font-size: 5.5vw;
+#services a {
+  color: #f8721b !important;
+}
+
+#services p {
+  padding: 10vh 0 !important;
+}
+
+/* Lifecycles */
+section#lifecycles {
+  padding-bottom: 9vh;
+}
+
+#lifecycles {
+  font-size: 3vw;
+}
+
+#lifecycles h4 {
+  margin: 0;
+}
+
+.lifecycle-description {
+  font-size: 1.5vw;
+  width: 70% !important;
+}
+
+.lifecycle:hover {
+  /* background-color: #86d5b04a; */
+  background-color: rgba(248, 115, 27, 0.1);
+  border: 1px solid rgba(248, 115, 27, 0.3);
+}
+
+.lifecycle:hover .learn-more-button {
+  display: flex;
+}
+
+.lifecycle-title {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+}
+
+.lifecycle {
+  padding: 1em;
+  border-radius: 30px;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.learn-more-button {
+  display: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 2vw;
+  color: #f8731b !important;
+  font-weight: 100;
+  font-family: "Inter", sans-serif !important;
+}
+
+.learn-more-button:hover {
+  font-weight: 300;
+  font-family: "Inter", sans-serif !important;
 }
 
 @media screen and (max-width: 850px) {
-  #services h3 {
+  #lifecycles h4 {
     font-size: 8vw;
-    margin-top: 0;
+    /* margin-top: 0; */
   }
 }
 
-#services div {
+#lifecycles div {
   width: 100%;
   cursor: pointer;
-  text-align: center;
+  text-align: left;
 }
 
-.services-container {
+.lifecycles-container {
   display: flex;
-  gap: 1ex;
+  /* gap: 1ex; */
   justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  align-items: flex-start;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-top: 5vh;
+  /* padding-top: 5vh; */
 }
 
 @media screen and (max-width: 900px) {
-  .services-container {
+  .lifecycles-container {
     display: flex;
-    gap: 1ex;
+    /* gap: 1ex; */
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
   }
 }
 
-.services-container div {
+.lifecycles-container div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
-  height: 100vh;
-  background: #fff;
-  border: 1px solid #000;
-  padding: 0;
-}
-
-@media screen and (max-width: 900px) {
-  .services-container div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 30vh;
-    background: #fff;
-    border: 1px solid #000;
-    padding: 0;
-  }
-}
-
-.service-description {
-  border: none;
+  gap: 1ex;
+  /* padding: 0; */
 }
 
 /* About */
+#about {
+  padding-bottom: 5vh;
+}
+
 #about p {
   line-height: 1.5;
   color: #000;
 }
+
+#about h3 {
+  margin-top: 0;
+  margin-bottom: 1vh;
+}
+
+#about h5 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5vw;
+}
+
+/* #about-bloom {
+  width: 80% !important;
+  text-align: justify;
+  left: 20%;
+} */
 
 .about-card {
   display: flex;
@@ -672,23 +736,27 @@ section h2 {
   text-align: justify;
 }
 
-.about-card h4 {
+.about-card h5 {
   margin-top: 0;
 }
 
 #maya {
+  padding: 0;
   padding-left: 5vw;
-  padding-right: 0;
 }
 
-#maya h4 {
+#maya h5 {
   text-align: right;
-  margin-top: 0;
+  margin: 0 0 1ex 0;
 }
 
 #nomi {
+  padding: 0;
   padding-right: 5vw;
-  padding-left: 0;
+}
+
+#nomi h5 {
+  margin: 0 0 1ex 0;
 }
 
 /* Let's Get Started */
@@ -709,12 +777,13 @@ section h2 {
 
 #cta {
   text-align: right;
-  max-width: 20vw;
+  width: max-content;
+  padding: 15vh 0 10vh 0;
 }
 
-#cta a h2 {
+#cta a h2.cta-link {
   line-height: 4vw;
-  font-size: 3vw;
+  font-size: 4vw;
   font-style: italic;
   margin-right: 2vw;
 }
@@ -731,12 +800,12 @@ section h2 {
   }
 
   #cta {
-    padding-top: 15vh;
+    padding: 15vh 0 5vh 0;
     text-align: center;
     max-width: 80vw;
   }
 
-  #cta a h2 {
+  #cta a h2.cta-link {
     font-size: 6vw;
     font-style: italic;
     line-height: normal;
@@ -756,7 +825,7 @@ section h2 {
 @media screen and (max-width: 600px) {
   #lets-get-started {
     width: 100%;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     min-height: 40vh;
     display: flex;
     justify-content: space-between;
@@ -772,12 +841,12 @@ section h2 {
   }
 
   #cta {
-    padding-top: 15vh;
+    padding: 15vh 0 5vh 0;
     text-align: right;
     max-width: 60vw;
   }
 
-  #cta a h2 {
+  #cta a h2.cta-link {
     font-size: 8vw;
     font-style: italic;
     line-height: normal;
@@ -813,6 +882,7 @@ form div {
   line-height: 4vw;
   font-style: italic;
   padding: 1ex 2em;
+  border-radius: 0;
 }
 
 #contact input,
@@ -835,6 +905,11 @@ textarea {
   height: 5vh;
 }
 
+textarea#message {
+  height: 100% !important;
+  max-height: 100% !important;
+}
+
 #contact button {
   width: 100%;
   border: none;
@@ -845,15 +920,15 @@ textarea {
   margin-top: 5vh;
 }
 
-button h1#lets-connect-button:hover {
+.cta-link:hover {
   color: #f8721b;
   font-style: italic;
 }
 
-button h1#lets-connect-button {
+.cta-link {
   cursor: pointer;
   padding: 0;
-  width: max-content;
+  width: max-content !important;
   text-decoration: none;
   background-image: linear-gradient(#f8721b, #f8721b);
   background-size: 0 1px;
@@ -863,9 +938,9 @@ button h1#lets-connect-button {
   transition: background-size 0.2s ease-in-out;
 }
 
-button h1#lets-connect-button:hover,
-button h1#lets-connect-button:focus,
-button h1#lets-connect-button:active {
+.cta-link:hover,
+.cta-link:focus,
+.cta-link:active {
   background-size: 100% 1px;
   background-position-x: 0%;
 }
@@ -993,7 +1068,7 @@ input:focus {
     margin: 2vh 0;
   }
 
-  button h1#lets-connect-button.big-left-text {
+  button h1.cta-link.big-left-text {
     font-size: 10vw !important;
   }
 
@@ -1014,7 +1089,7 @@ input:focus {
     margin: 2vh 0;
   }
 
-  button h1#lets-connect-button.big-left-text {
+  button h1.cta-link.big-left-text {
     font-size: 10vw !important;
   }
 
@@ -1034,7 +1109,7 @@ footer {
   text-align: center;
   padding-top: 1vh;
   padding-right: 1vw;
-  padding-bottom: 2vh;
+  padding-bottom: 1vh;
   padding-left: 1vw;
   color: rgba(0, 0, 0, 0.8);
   border-top: 1px solid rgba(0, 0, 0, 0.2);
@@ -1052,7 +1127,7 @@ footer {
     text-align: center;
     padding-top: 1vh;
     padding-right: 1vw;
-    padding-bottom: 2vh;
+    padding-bottom: 1vh;
     padding-left: 1vw;
     color: rgba(0, 0, 0, 0.8);
     border-top: 1px solid rgba(0, 0, 0, 0.2);
@@ -1071,7 +1146,7 @@ footer {
     text-align: center;
     padding-top: 1vh;
     padding-right: 1vw;
-    padding-bottom: 2vh;
+    padding-bottom: 1vh;
     padding-left: 1vw;
     color: rgba(0, 0, 0, 0.8);
     border-top: 1px solid rgba(0, 0, 0, 0.2);
